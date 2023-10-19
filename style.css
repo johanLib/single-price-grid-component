@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /*Neutral*/
+
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+
+  /*Body Copy*/
+
+  --fs: 16px;
+
+  /*font weights */
+
+  --fw-1: 400;
+  --fw-2: 700;
+}
+
+* , *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--Light-Gray);
+  font-family: 'Karla', sans-serif;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+  .main-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-inline: 1rem;
+    max-width: 600px;
+    height: 350px;
+  }
+
+  .join-card {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .subscription-card {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  .why-card {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+
+  .subscription-card {
+    border-radius: 0 0 0 7px;
+  }
+
+  .why-card {
+    border-radius: 0 0 7px 0 !important;
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+.main-card {
+  margin: 25px;
+}
+
+.join-card {
+  background-color: white;
+  padding: 35px 25px 35px;
+  border-radius: 7px 7px 0 0;
+}
+
+.join-card h2 {
+  color: var(--Cyan);
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.join-card h2.days-30 {
+  color: var(--Bright-Yellow);
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: var(--fw-2);
+}
+
+.join-card p {
+  color: var(--Grayish-Blue);
+  font-weight: var(--fw-1);
+  line-height: 1.8;
+  font-size: 14px;
+}
+.subscription-card {
+  background-color: var(--Cyan);
+  padding: 35px 25px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: white;
+}
+
+.subscription-card h2 {
+  font-size: 20px;
+}
+
+.subscription-card .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.subscription-card .price {
+  font-size: 30px;
+  font-weight: var(--fw-2);
+}
+
+.subscription-card .month {
+  font-weight: var(--fw-1);
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-card p {
+  margin-top: 10px;
+}
+
+.subscription-card button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: var(--Bright-Yellow);
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 15px;
+  box-shadow: 2px 13px 10px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.subscription-card button:hover {
+  background-color: hsl(71, 73%, 45%);
+}
+
+
+.why-card {
+  background-color: hsla(179, 62%, 43%, 0.8);
+  padding: 35px 25px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: white;
+  border-radius: 0 0 7px 7px;
+}
+
+.why-card h2 {
+  font-size: 20px;
+}
+
+.why-card p {
+  margin-top: 20px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+}
